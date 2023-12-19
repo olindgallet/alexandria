@@ -4,9 +4,9 @@ requires      = ["setuptools>=61.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "jobscraperv2"
+name = "alexandria"
 version = "1.0.0"
-description = "Scrape job websites to various observers."
+description = "Alexandria media library"
 readme = "README.md"
 authors = [{ name = "Olin Gallet", email = "olindgallet@olingallet.com" }]
 license = { file = "LICENSE" }
@@ -14,14 +14,9 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
 ]
-keywords = ["scraper", "airtable", "automation"]
+keywords = ["db"]
 dependencies = [
-    "backports.zoneinfo==0.2.1"
-    "pkg_resources==0.0.0"
-    "plumbum==1.8.1"
-    "psycopg==3.1.8"
-    "psycopg-binary==3.1.8"
-    "typing_extensions==4.4.0"
+
 ]
 
 [project.scripts]
