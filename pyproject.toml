@@ -14,9 +14,9 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
 ]
-keywords = ["db"]
 dependencies = [
-
+    "flask",
+    "waitress"
 ]
 
 [project.scripts]
