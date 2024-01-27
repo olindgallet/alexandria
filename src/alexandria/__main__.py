@@ -35,7 +35,7 @@ def list_music():
 @app.route("/listmovies", methods=['GET'])
 def list_movies():
     return jsonify({"title": "Gone with the Wind"}), 200
-
+    
 @app.route("/listanime", methods=['GET'])
 def list_anime():
     return jsonify({"title": "Gone with the Wind"}), 200
@@ -60,7 +60,7 @@ def _parse_env(location: str):
         print(_MESSAGE_COLOR | f'Searching for: {os.environ[_MOVIE_PATH_KEY]}')
         try:
             with open(os.environ[_MOVIE_PATH_KEY], 'r') as movies_file:
-                movies_data = json.load(movies_file)
+                _movie_data = json.load(movies_file)
                 print(_SUCCESS_COLOR | '[MOVIE DATA SUCCESSFULLY LOADED]')
         except IOError:
             print(_ERROR_COLOR | f'Movie file not found: {os.environ[_MOVIE_PATH_KEY]}')
@@ -72,7 +72,7 @@ def _parse_env(location: str):
         print(_MESSAGE_COLOR | f'Searching for: {os.environ[_TV_SHOW_PATH_KEY]}')
         try:
             with open(os.environ[_TV_SHOW_PATH_KEY], 'r') as tv_show_file:
-                tv_show_data = json.load(tv_show_file)
+                _tv_show_data = json.load(tv_show_file)
                 print(_SUCCESS_COLOR | '[TV SHOW DATA SUCCESSFULLY LOADED]')
         except IOError:
             print(_ERROR_COLOR | f'TV show file not found: {os.environ[_MOVIE_PATH_KEY]}')
